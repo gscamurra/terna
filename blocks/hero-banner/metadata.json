@@ -1,0 +1,19 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "In-page photo banner with eyebrow, title, text and link overlaid at left",
+    "description": "Full-width night satellite photo of Italy with white eyebrow, white uppercase title, white body text and link overlay on the left.\nFull-width photo with dark overlay, white eyebrow, white uppercase title and link."
+  },
+  "contentPattern": {
+    "summary": "Full-width (in-page) photo banner with eyebrow, title, text and link overlaid at left.\nSame in-page photo banner as section 9 (reuse).",
+    "structure": "row 1: background image; row 2: eyebrow paragraph, title (heading), optional description, CTA link. The image may also be authored inside the text cell",
+    "sourceContent": "Background photo, eyebrow, title, description, \"PER SAPERNE DI PIÙ\" link\nBackground photo, eyebrow \"LAVORA CON NOI\", title, \"Per saperne di più\" link"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage \"Terna incontra\" and \"Lavora con noi\" banners.",
+  "reuseGuidance": "Use for a single static photo banner inside the page. For rotating slides use carousel-hero.",
+  "sourceUrl": "https://www.terna.it/it"
+}

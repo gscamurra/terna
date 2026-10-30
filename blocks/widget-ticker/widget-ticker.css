@@ -1,0 +1,179 @@
+/* widget-ticker: values from https://www.terna.it/it .teleborsa--wrapper computed styles */
+
+/* source: ticker bottom -> first tiles row is 128px (129px at desktop, ticker ends 1px above the hero bottom) */
+main > .section.widget-ticker-container {
+  margin-bottom: 128px;
+}
+
+/* attached to the hero above it, as on the source */
+main > .section.carousel-hero-container + .section.widget-ticker-container {
+  margin-top: 0;
+}
+
+/* mobile base (source < 1280px): info row on top, full-bleed scrolling strip below */
+.widget-ticker {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 13px;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.widget-ticker .widget-ticker-info {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  min-width: 200px;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.widget-ticker .widget-ticker-title {
+  font-weight: 600;
+}
+
+.widget-ticker .widget-ticker-time {
+  font-weight: 400;
+}
+
+.widget-ticker .widget-ticker-track {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-bottom: 9px;
+  border-bottom: 2px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.widget-ticker .widget-ticker-items {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* blue divider between repeated copies of the strip */
+.widget-ticker .widget-ticker-items::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 3px;
+  height: 25px;
+  margin: 0 15px;
+  background-color: var(--brand-primary);
+  border-radius: 3px;
+}
+
+.widget-ticker .widget-ticker-item {
+  display: block;
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+.widget-ticker .widget-ticker-item:last-child {
+  margin-right: 0;
+}
+
+.widget-ticker .widget-ticker-key,
+.widget-ticker .widget-ticker-value {
+  display: block;
+  white-space: nowrap;
+}
+
+.widget-ticker .widget-ticker-value {
+  font-weight: 600;
+}
+
+.widget-ticker .widget-ticker-value.widget-ticker-negative {
+  color: var(--brand-primary);
+}
+
+.widget-ticker .widget-ticker-value.widget-ticker-positive {
+  color: rgb(0 146 69);
+}
+
+/* hidden copies are only needed while scrolling */
+.widget-ticker .widget-ticker-items-copy {
+  display: none;
+}
+
+@keyframes widget-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .widget-ticker.widget-ticker-scrolling .widget-ticker-items-copy {
+    display: flex;
+  }
+
+  .widget-ticker.widget-ticker-scrolling .widget-ticker-items {
+    animation: widget-ticker-scroll 10s linear infinite;
+  }
+
+  .widget-ticker.widget-ticker-scrolling .widget-ticker-track:hover .widget-ticker-items,
+  .widget-ticker.widget-ticker-scrolling .widget-ticker-track:focus-within .widget-ticker-items {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .widget-ticker .widget-ticker-track {
+    overflow-x: auto;
+  }
+}
+
+/* desktop (source >= 80em): info column left, strip right, single 1px bottom rule */
+@media (width >= 1280px) {
+  main > .section.widget-ticker-container {
+    margin-bottom: 129px;
+  }
+
+  .widget-ticker {
+    flex-direction: row;
+    margin: 0 calc(3.4rem - var(--content-padding));
+    padding: 24px 0 22px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .widget-ticker .widget-ticker-info {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 0;
+  }
+
+  .widget-ticker .widget-ticker-track {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .widget-ticker .widget-ticker-items::after {
+    margin: 0 25px;
+  }
+
+  .widget-ticker .widget-ticker-item {
+    margin-right: 50px;
+  }
+
+  .widget-ticker .widget-ticker-item:last-child {
+    margin-right: 0;
+  }
+}

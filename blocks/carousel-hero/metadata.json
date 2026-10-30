@@ -1,0 +1,19 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-viewport rotating hero with photo slides, overlay text and labelled tab navigation",
+    "description": "Full-viewport (900px) photo slides with dark overlay, white uppercase condensed title, white body text, arrow-link CTA; bottom tab nav with slide labels (SIAMO TERNA, OPERE, STRATEGIA, TWIN TRANSITION) and stop/play button. Slide 4 has a Play video button."
+  },
+  "contentPattern": {
+    "summary": "Full-viewport photo slides with overlay text, CTA and labelled tab navigation (play/stop control); differs from the KPI slider by full-bleed images and text tabs.",
+    "structure": "one row per slide. Cell 1: background image. Cell 2: title (heading), description, CTA link (a YouTube/Vimeo/.mp4 link opens a video dialog instead). Optional cell 3: short tab label (defaults to the slide heading). Rotates automatically with a stop/play button unless reduced motion is preferred",
+    "sourceContent": "4 slides: photo background, title, description, \"Scopri di più\" link (slide 4: video play instead of link); tab labels per slide"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage top hero with 2-6 rotating messages, each needing its own tab label.",
+  "reuseGuidance": "Use for full-bleed photo slides with text tabs. For stat/number slides use carousel-kpi; for a single static photo banner use hero-banner.",
+  "sourceUrl": "https://www.terna.it/it"
+}

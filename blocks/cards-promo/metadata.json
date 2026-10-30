@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-promo",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Text-only promo cards, each with its own solid background color and white text",
+    "description": "Three solid-color tiles (indigo #3d4f96, blue #006fb1, teal #2e807d) with white eyebrow, white uppercase condensed title, white body, uppercase arrow link."
+  },
+  "contentPattern": {
+    "summary": "Text-only promo cards, each with its own solid background color and white text.",
+    "structure": "one row per card. Optional image cell; text cell with eyebrow paragraph, title (heading), description and a trailing CTA link. Extra text cells are merged into the body",
+    "sourceContent": "3 look-alike promo items: eyebrow, title, description, CTA link"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage promo row: Sostenibilita, Innovazione, Sistema elettrico.",
+  "reuseGuidance": "Use for colored text promos with eyebrow and CTA. For plain linked navigation tiles use cards-nav.",
+  "sourceUrl": "https://www.terna.it/it"
+}

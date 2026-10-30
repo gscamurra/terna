@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-intro",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Two-column intro band: large heading and link on the left, body text on the right",
+    "description": "Light-blue band (rgb 212,223,241). Left: blue uppercase condensed h2 + \"TERNA IN BREVE >\" link; right: two blue paragraphs."
+  },
+  "contentPattern": {
+    "summary": "Two-column intro: large heading + link left, body paragraphs right, on a colored band.",
+    "structure": "one row, two cells. The cell holding the heading is the lead column (placed first); the other cell holds body paragraphs. Link-only paragraphs are marked as CTAs. Place it in a section with a style (e.g. light-blue) for the colored band",
+    "sourceContent": "Heading + link on the left, two paragraphs on the right"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage \"Siamo dietro l'energia che usi ogni giorno\" intro on a light-blue band.",
+  "reuseGuidance": "Use for heading-left / text-right introductions. For three or more tiles use columns-tiles.",
+  "sourceUrl": "https://www.terna.it/it"
+}

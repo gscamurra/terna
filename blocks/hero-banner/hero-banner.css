@@ -1,0 +1,154 @@
+/* hero-banner: in-page photo banner (source: terna.it .terna-slidecontent) */
+.hero-banner {
+  position: relative;
+  display: flex;
+  min-height: 350px;
+  overflow: hidden;
+  color: #fff;
+  background: #000;
+}
+
+.hero-banner .hero-banner-image,
+.hero-banner .hero-banner-image picture {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-banner .hero-banner-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* source .image-overlay: black at 0.6 opacity */
+.hero-banner .hero-banner-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+/* option for already-dark photos (source "Terna incontra" banner has no overlay) */
+.hero-banner.no-overlay .hero-banner-image::after {
+  content: none;
+}
+
+.hero-banner .hero-banner-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.hero-banner .hero-banner-content > * {
+  margin: 0;
+}
+
+/* eyebrow */
+.hero-banner .hero-banner-eyebrow {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* title */
+.hero-banner .hero-banner-content .hero-banner-title {
+  margin: 0 0 40px;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36.4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* description */
+.hero-banner .hero-banner-content > p:not(.hero-banner-eyebrow, .hero-banner-cta) {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* CTA: pushed to the bottom of the banner (source min-height layout) */
+.hero-banner .hero-banner-content .hero-banner-cta {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--cta-letter-spacing);
+  text-transform: uppercase;
+}
+
+.hero-banner .hero-banner-content a:any-link {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hero-banner .hero-banner-content a:any-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* chevron after the CTA (source .icon-triangle) */
+.hero-banner .hero-banner-cta a::after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  width: 7px;
+  height: 7px;
+  margin: -3px 10px 0 3px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+
+.hero-banner.hero-banner-no-image {
+  color: inherit;
+  background: none;
+}
+
+.hero-banner.hero-banner-no-image .hero-banner-content,
+.hero-banner.hero-banner-no-image .hero-banner-content .hero-banner-title,
+.hero-banner.hero-banner-no-image .hero-banner-content a:any-link {
+  color: inherit;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    min-height: 448px;
+  }
+
+  .hero-banner .hero-banner-content {
+    padding: 80px;
+  }
+
+  .hero-banner .hero-banner-content .hero-banner-title {
+    max-width: 50%;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+
+  .hero-banner .hero-banner-content > p:not(.hero-banner-eyebrow, .hero-banner-cta) {
+    max-width: 50%;
+  }
+
+  .hero-banner .hero-banner-content .hero-banner-cta {
+    padding-top: 24px;
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.terna.it/it"
+      ],
+      "representativeUrl": "https://www.terna.it/it",
+      "description": "Terna homepage: hero carousel, share-price ticker, tile rows, promo cards, KPI slider, photo banners, live data and section navigation",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".area--area-1 .terna-sliderfullheight"
+          ]
+        },
+        {
+          "name": "widget-ticker",
+          "instances": [
+            ".teleborsa--wrapper"
+          ]
+        },
+        {
+          "name": "columns-tiles",
+          "instances": [
+            ".area--area-3",
+            ".area--area-23",
+            ".area--area-26"
+          ]
+        },
+        {
+          "name": "columns-intro",
+          "instances": [
+            ".boxevidence__wrapper"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".area--area-13"
+          ]
+        },
+        {
+          "name": "carousel-kpi",
+          "instances": [
+            ".kpi-swiper"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            ".area--area-32 .website-vue .terna-slidecontent"
+          ]
+        },
+        {
+          "name": "widget-live-data",
+          "instances": [
+            ".boxdatiso__box-wrapper"
+          ]
+        },
+        {
+          "name": "cards-nav",
+          "instances": [
+            "ul.link-card__deck"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero carousel",
+          "selector": [
+            ".area--area-1 .terna-sliderfullheight"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Teleborsa stock ticker",
+          "selector": [
+            ".teleborsa--wrapper"
+          ],
+          "style": null,
+          "blocks": [
+            "widget-ticker"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Tiles row: Fabbisogno energetico / Comunicati stampa / Lightbox",
+          "selector": [
+            ".area--area-3"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-tiles"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Intro: Siamo dietro l'energia che usi ogni giorno",
+          "selector": [
+            ".area--area-9",
+            ".boxevidence__wrapper"
+          ],
+          "style": "light-blue",
+          "blocks": [
+            "columns-intro"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Promo tiles: Sostenibilità / Innovazione / Sistema elettrico",
+          "selector": [
+            ".area--area-13"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Tiles row: Risultati 2025 / Info finanziarie / Calendario",
+          "selector": [
+            ".area--area-23"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-tiles"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Tiles row: Programmazione territoriale / News operatori / Dietro i nostri progetti",
+          "selector": [
+            ".area--area-26"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-tiles"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "KPI highlights carousel",
+          "selector": [
+            ".area--area-32 > .fullwidthtemplate:first-child",
+            ".kpi-swiper"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "carousel-kpi"
+          ],
+          "defaultContent": [
+            "div.kpi-swiper--link"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Terna incontra (photo banner)",
+          "selector": [
+            ".area--area-32 .website-vue .content-item:nth-child(1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Dati.Terna live data",
+          "selector": [
+            ".boxdatiso__wrapper"
+          ],
+          "style": null,
+          "blocks": [
+            "widget-live-data"
+          ],
+          "defaultContent": [
+            ".boxdatiso__item-section",
+            ".boxdatiso__item-title",
+            ".boxdatiso__item-text",
+            ".boxdatiso__item-link"
+          ]
+        },
+        {
+          "id": "section-11",
+          "name": "Lavora con noi (photo banner)",
+          "selector": [
+            ".area--area-32 .website-vue .content-item:nth-child(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-12",
+          "name": "Navigazione pagine di sezione",
+          "selector": [
+            ".area--area-32 > .fullwidthtemplate:last-child",
+            "section.t-component"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-nav"
+          ],
+          "defaultContent": [
+            "h2.visually-hidden"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

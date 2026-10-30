@@ -1,0 +1,335 @@
+/* Block: carousel-kpi -- values from source .kpi-swiper computed styles (terna.it/it) */
+
+/* mobile base */
+
+/*
+ * Section band: on the source the light-grey band (.kpi-swiper) is content-width,
+ * not full-bleed. Move the grey from the section onto its content-width wrappers
+ * (block + "Per saperne di più" default content) for this section only.
+ */
+main > .section.light-grey.carousel-kpi-container {
+  margin: var(--section-spacing) 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+main > .section.light-grey.carousel-kpi-container > div {
+  display: flow-root;
+  width: calc(100% - 2 * var(--content-padding));
+  max-width: calc(var(--content-max-width) - 2 * var(--content-padding));
+  padding: 0;
+  background-color: var(--light-color);
+}
+
+main > .section.light-grey.carousel-kpi-container > div:first-child {
+  padding-top: 16px;
+}
+
+main > .section.light-grey.carousel-kpi-container > div:last-child {
+  padding-bottom: 16px;
+}
+
+/* "Per saperne di più" link below the slider (source .kpi-swiper--link) */
+main > .section.carousel-kpi-container > .default-content-wrapper > p {
+  min-height: 18px;
+  margin: 21px 0 24px;
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+main > .section.carousel-kpi-container > .default-content-wrapper a:any-link {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand-primary);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* source triangle icon: 7px chevron of 2px top/right borders rotated 45deg */
+main > .section.carousel-kpi-container > .default-content-wrapper a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: -3px 10px 0 8px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+
+.carousel-kpi {
+  position: relative;
+  padding: 0 16px;
+  color: var(--text-color);
+}
+
+.carousel-kpi .carousel-kpi-panel {
+  padding: 32px 16px;
+  background-color: #fff;
+}
+
+/* vertical icon navigation (row on mobile) */
+.carousel-kpi .carousel-kpi-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 32px;
+}
+
+.carousel-kpi .carousel-kpi-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 1px 6px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: rgb(148 148 148);
+  cursor: pointer;
+}
+
+.carousel-kpi .carousel-kpi-nav-item[aria-selected='true'] {
+  color: #006fb1;
+}
+
+.carousel-kpi .carousel-kpi-nav-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-kpi .carousel-kpi-nav-item picture,
+.carousel-kpi .carousel-kpi-nav-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* monochrome SVG icons painted with currentcolor via mask (set by JS) */
+.carousel-kpi .carousel-kpi-nav-item-mask .icon {
+  background-color: currentcolor;
+  mask: var(--carousel-kpi-icon) center / contain no-repeat;
+}
+
+.carousel-kpi .carousel-kpi-nav-item-mask .icon img {
+  visibility: hidden;
+}
+
+/* slides */
+.carousel-kpi .carousel-kpi-viewport {
+  min-width: 0;
+}
+
+.carousel-kpi .carousel-kpi-slides {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-kpi .carousel-kpi-slide {
+  grid-area: 1 / 1;
+  min-width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.carousel-kpi .carousel-kpi-slide.carousel-kpi-slide-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel-kpi .carousel-kpi-slide-header > * {
+  margin: 0;
+}
+
+.carousel-kpi .carousel-kpi-slide-title {
+  margin: 0;
+  color: #006fb1;
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.carousel-kpi .carousel-kpi-slide-header .carousel-kpi-slide-meta {
+  margin: 0 0 24px;
+  color: var(--text-strong-color);
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+}
+
+.carousel-kpi .carousel-kpi-slide-meta small {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+/* stats: stacked on mobile, one row on desktop */
+.carousel-kpi .carousel-kpi-stats {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-kpi .carousel-kpi-stat {
+  min-width: 0;
+  color: var(--text-strong-color);
+}
+
+.carousel-kpi .carousel-kpi-stat > * {
+  margin: 0;
+  font-size: 12.8px;
+
+  /* source sets these lines as <small> inside a 24px line box */
+  line-height: 24px;
+}
+
+.carousel-kpi .carousel-kpi-stat > :last-child {
+  margin-bottom: 16px;
+}
+
+.carousel-kpi .carousel-kpi-stat .carousel-kpi-stat-value {
+  margin: 0 0 8px;
+  color: #006fb1;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.carousel-kpi .carousel-kpi-stat .carousel-kpi-stat-label {
+  font-size: var(--body-font-size-m);
+  line-height: 24px;
+}
+
+.carousel-kpi .carousel-kpi-stat-label sub {
+  font-size: 12px;
+}
+
+/* prev / next arrows: hidden on mobile, as on the source */
+.carousel-kpi .carousel-kpi-prev,
+.carousel-kpi .carousel-kpi-next {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-kpi .carousel-kpi-slide {
+    transition: none;
+  }
+}
+
+@media (width >= 900px) {
+  main > .section.light-grey.carousel-kpi-container > div:first-child {
+    padding-top: 40px;
+  }
+
+  main > .section.carousel-kpi-container > .default-content-wrapper > p {
+    padding: 0 60px;
+    text-align: right;
+  }
+
+  .carousel-kpi {
+    padding: 0 60px;
+  }
+
+  .carousel-kpi .carousel-kpi-panel {
+    display: flex;
+    padding: 32px 40px;
+  }
+
+  .carousel-kpi .carousel-kpi-nav {
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 78px 0 0;
+  }
+
+  .carousel-kpi .carousel-kpi-nav-item .icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .carousel-kpi .carousel-kpi-viewport {
+    flex: 1;
+  }
+
+  .carousel-kpi .carousel-kpi-stats {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .carousel-kpi .carousel-kpi-stat {
+    flex: 1 1 0;
+  }
+
+  .carousel-kpi .carousel-kpi-prev,
+  .carousel-kpi .carousel-kpi-next {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    width: 27px;
+    height: 44px;
+    margin: -22px 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: var(--brand-primary);
+    cursor: pointer;
+  }
+
+  .carousel-kpi .carousel-kpi-prev {
+    left: 15px;
+  }
+
+  .carousel-kpi .carousel-kpi-next {
+    right: 15px;
+  }
+
+  .carousel-kpi .carousel-kpi-prev:disabled,
+  .carousel-kpi .carousel-kpi-next:disabled {
+    opacity: 0.35;
+    cursor: auto;
+  }
+
+  .carousel-kpi .carousel-kpi-prev::after,
+  .carousel-kpi .carousel-kpi-next::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 21px;
+    height: 21px;
+    border: 2.5px solid currentcolor;
+    border-bottom: 0;
+    border-left: 0;
+    box-sizing: border-box;
+    transform: translate(-25%, -50%) rotate(-135deg);
+  }
+
+  .carousel-kpi .carousel-kpi-next::after {
+    transform: translate(-75%, -50%) rotate(45deg);
+  }
+}

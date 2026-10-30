@@ -1,0 +1,19 @@
+{
+  "variantName": "columns-tiles",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Fixed row of equal bordered tiles, each with its own mixed content",
+    "description": "Three equal bordered tiles in a fixed 3-column grid (stacks on mobile). Small uppercase blue eyebrow labels, uppercase \"PER SAPERNE DI PIÙ >\" links. Third tile is a dark photo slider (Lightbox blog) with white text and dot pagination.\nThree bordered tiles. Tile 1: eyebrow + big blue uppercase title + link; Tile 2: document list with dates and download/slideshare/webcast icons + archive link; Tile 3: calendar icon, big \"9M2026\", event text, event date, link.\nSame bordered 3-tile grid as section 6: promo tile, paginated News Operatori list (title link + date + share, dot pagination) + \"Tutte le news operatori\" link, promo tile."
+  },
+  "contentPattern": {
+    "summary": "Three equal bordered tiles in a fixed grid with eyebrow label, mixed content and bottom uppercase link.\nSame 3-tile bordered grid as section 3 (reuse).\nSame 3-tile bordered grid as section 3 (reuse).",
+    "structure": "one row per tile row, one cell per tile. In a tile: optional short first paragraph = eyebrow; heading = title; a paragraph whose link text is its own URL becomes an embedded iframe; a list with more than 3 items is paginated with dots; two or more images turn the tile into an image slider (each image starts a slide); a trailing link-only paragraph is the tile CTA pinned to the bottom",
+    "sourceContent": "Tile 1: label \"Fabbisogno energetico\", embedded chart iframe, link \"Per saperne di più\"; Tile 2: label \"Comunicati stampa\", paginated list of press releases (title link + date + share), link \"Tutti i comunicati\"; Tile 3: Lightbox blog slider (3 articles: image, title, \"Leggi l'articolo\")\nFixed set of 3 different tiles side by side\nFixed set of 3 different tiles side by side"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage rows of three tiles: chart embed, press-release list, blog slider, financial results, document list, calendar event, news list.",
+  "reuseGuidance": "Use for a fixed set of different tiles side by side. For look-alike repeating items use a cards variant.",
+  "sourceUrl": "https://www.terna.it/it"
+}

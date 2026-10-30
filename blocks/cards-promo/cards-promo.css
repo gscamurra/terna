@@ -1,0 +1,177 @@
+/* cards-promo: solid-colour text tiles (source: terna.it/it .area--area-13/14/15 .swiper-slide-content) */
+.cards-promo > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-promo .cards-promo-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 320px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* divider between tiles (source .area--border) */
+.cards-promo .cards-promo-card:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+/* per-card colours from source bgcolor_hex */
+.cards-promo .cards-promo-card:nth-child(3n + 1) {
+  background-color: #3d4f96;
+}
+
+.cards-promo .cards-promo-card:nth-child(3n + 2) {
+  background-color: #006fb1;
+}
+
+.cards-promo .cards-promo-card:nth-child(3n + 3) {
+  background-color: #2e807d;
+}
+
+.cards-promo .cards-promo-card-image {
+  line-height: 0;
+}
+
+.cards-promo .cards-promo-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-promo .cards-promo-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px 20px;
+  font-family: var(--body-font-family);
+}
+
+.cards-promo .cards-promo-card-body > * {
+  margin: 0;
+}
+
+.cards-promo .cards-promo-card-body p {
+  font-size: var(--body-font-size-s);
+  line-height: 21px;
+  color: #fff;
+}
+
+.cards-promo .cards-promo-card-body .cards-promo-card-eyebrow {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: var(--eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+
+.cards-promo .cards-promo-card-body .cards-promo-card-title {
+  margin: 0 0 40px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36.4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* source .terna-slidecontent-item-text { margin-top: auto }: text + CTA sit at the card bottom,
+   so cards stretched to the tallest one in the row keep their text/CTA rows aligned */
+.cards-promo .cards-promo-card-body .cards-promo-card-title + :not(.cards-promo-card-cta) {
+  margin-top: auto;
+}
+
+.cards-promo .cards-promo-card-body .cards-promo-card-cta {
+  margin-top: 16px;
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--cta-letter-spacing);
+}
+
+main .cards-promo .cards-promo-card-cta .button-container {
+  display: inline;
+}
+
+.cards-promo .cards-promo-card-cta a:any-link,
+main .cards-promo .cards-promo-card-cta a.button:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--cta-letter-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.cards-promo .cards-promo-card-cta a:hover,
+main .cards-promo .cards-promo-card-cta a.button:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* chevron after the CTA (source .icon-triangle: 7px box, 2px top/right border, rotated 45deg) */
+.cards-promo .cards-promo-card-cta a::after {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 7px;
+  height: 7px;
+  margin: -3px 0 0 4px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+
+@media (width >= 900px) {
+  .cards-promo > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-promo .cards-promo-card {
+    min-height: 448px;
+  }
+
+  .cards-promo .cards-promo-card:not(:last-child) {
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 0;
+  }
+
+  .cards-promo .cards-promo-card-body {
+    padding: 40px;
+  }
+
+  .cards-promo .cards-promo-card-body p {
+    font-size: var(--body-font-size-m);
+    line-height: 24px;
+  }
+
+  .cards-promo .cards-promo-card-body .cards-promo-card-eyebrow {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .cards-promo .cards-promo-card-body .cards-promo-card-title {
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+
+  .cards-promo .cards-promo-card-body .cards-promo-card-cta {
+    margin-top: 24px;
+  }
+}

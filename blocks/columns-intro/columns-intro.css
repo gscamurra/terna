@@ -1,0 +1,169 @@
+/* columns-intro: values from https://www.terna.it/it .boxevidence__wrapper computed styles */
+
+/*
+ * Source band is boxed (bg on the inner content-width wrapper), not full-bleed:
+ * move the light-blue section background onto the block itself.
+ */
+main .section.light-blue.columns-intro-container {
+  background-color: transparent;
+  margin: var(--section-spacing) 0;
+  padding: 0;
+}
+
+.columns-intro {
+  padding: 40px;
+  color: var(--brand-primary);
+}
+
+main .section.light-blue .columns-intro {
+  background-color: var(--light-blue-color);
+}
+
+.columns-intro .columns-intro-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-intro .columns-intro-row + .columns-intro-row {
+  margin-top: 48px;
+}
+
+.columns-intro .columns-intro-row > div {
+  min-width: 0;
+}
+
+/* CTA: "TERNA IN BREVE >" */
+.columns-intro .columns-intro-cta {
+  margin: 0;
+  font-size: var(--cta-font-size);
+  line-height: 18px;
+}
+
+/* mobile: heading, text, then the CTA link (source order on small screens) */
+.columns-intro .columns-intro-2-cols > .columns-intro-main {
+  display: contents;
+}
+
+.columns-intro .columns-intro-2-cols > .columns-intro-main > * {
+  order: 0;
+}
+
+.columns-intro .columns-intro-2-cols > .columns-intro-text {
+  order: 1;
+  margin: 0 0 24px;
+}
+
+.columns-intro .columns-intro-2-cols > .columns-intro-main > .columns-intro-cta {
+  order: 2;
+}
+
+.columns-intro h2 {
+  margin: 0 0 24px;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36.4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+}
+
+.columns-intro p {
+  margin: 0 0 18px;
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--brand-primary);
+}
+
+.columns-intro .columns-intro-text > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-intro .columns-intro-cta a:any-link,
+main .columns-intro .columns-intro-cta a.button:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand-primary);
+  font-family: var(--body-font-family);
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--cta-letter-spacing);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: normal;
+}
+
+/* source .terna-link: underline on hover, colour unchanged */
+.columns-intro .columns-intro-cta a:any-link:hover,
+main .columns-intro .columns-intro-cta a.button:any-link:hover {
+  text-decoration: underline;
+}
+
+.columns-intro .columns-intro-cta a:any-link::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: -3px 10px 0 3px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  vertical-align: middle;
+}
+
+.columns-intro img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .columns-intro .columns-intro-row {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .columns-intro .columns-intro-2-cols > .columns-intro-main {
+    display: block;
+    flex: 0 1 47%;
+  }
+
+  .columns-intro .columns-intro-2-cols > .columns-intro-text {
+    flex: 0 1 53%;
+    margin: 8px 0 0;
+  }
+
+  .columns-intro .columns-intro-row > div {
+    flex: 1;
+  }
+
+  .columns-intro .columns-intro-1-cols > div {
+    flex-basis: 100%;
+  }
+
+  .columns-intro h2 {
+    margin-bottom: 32px;
+  }
+
+  .columns-intro .columns-intro-main > h2:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .columns-intro {
+    padding: 80px 155px;
+  }
+}
+
+@media (width >= 1280px) {
+  .columns-intro h2 {
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "terna": {
+      "previewOrg": "gscamurra",
+      "previewSite": "terna",
+      "contentHostUrl": "https://content.da.live/gscamurra/terna/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

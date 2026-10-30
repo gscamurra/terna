@@ -1,0 +1,19 @@
+{
+  "variantName": "widget-ticker",
+  "baseBlock": "widget",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Thin horizontal strip of share-price figures (Teleborsa ticker)",
+    "description": "Thin 64px white strip with live Terna share data (Ultimo prezzo, Variazione %, Apertura, ...), scrolling marquee."
+  },
+  "contentPattern": {
+    "summary": "Thin horizontal scrolling strip of live share-price figures.",
+    "structure": "either one cell with a link to /widgets/<path>/<name>.html (loads the live widget), or a snapshot table: row 1 = title | timestamp, each further row = label | value (values starting with - or + are flagged negative/positive). Scrolls as a marquee unless reduced motion is preferred",
+    "sourceContent": "Live stock ticker \"Terna - Indici Teleborsa\" (third-party live data)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Share price strip below the homepage hero.",
+  "reuseGuidance": "Use for any short key/value live-figure strip. For boxed figures with deltas and timestamps use widget-live-data.",
+  "sourceUrl": "https://www.terna.it/it"
+}

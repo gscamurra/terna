@@ -1,0 +1,19 @@
+{
+  "variantName": "widget-live-data",
+  "baseBlock": "widget",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Boxed live data figures (value, delta, label, last update) from dati.terna.it",
+    "description": "White band: blue eyebrow, dark-blue uppercase title, paragraph; three light grey-blue (#f3f6fb) live data boxes (Fabbisogno, Generazione, Trasmissione) with big blue values and timestamps; \"VAI AL PORTALE DATI >\" link."
+  },
+  "contentPattern": {
+    "summary": "Three boxed live data figures (value, delta arrow, label, timestamp).",
+    "structure": "either one cell with a link to /widgets/<path>/<name>.html (loads the live widget), or a snapshot table with one row per box: title | zone | value | delta | label | last update (one cell each, or one cell with one paragraph each). Delta (a percentage), value (starts with a number) and the last-update line are recognised by content, so any can be omitted",
+    "sourceContent": "3 live data boxes fed from dati.terna.it (value, delta, label, last update)"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage Dati.Terna section: Fabbisogno, Generazione, Trasmissione.",
+  "reuseGuidance": "Use for boxed headline figures. For a scrolling strip of key/value figures use widget-ticker.",
+  "sourceUrl": "https://www.terna.it/it"
+}

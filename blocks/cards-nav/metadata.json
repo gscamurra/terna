@@ -1,0 +1,19 @@
+{
+  "variantName": "cards-nav",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Grid of text-only linked tiles (section title and short description)",
+    "description": "Grid of 8 light-blue (#edf2fa) link tiles (section title + short description), wraps to rows; heading is visually hidden."
+  },
+  "contentPattern": {
+    "summary": "Text-only linked tiles (title + short description) on light-blue backgrounds, wrapping grid.",
+    "structure": "one row per tile: linked title (heading or paragraph) and a short description. The first link makes the whole tile clickable",
+    "sourceContent": "8 linked items: Chi siamo, Sistema elettrico, Progetti e territorio, Sostenibilità, Investitori, Governance, Persone, Media"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage \"Navigazione pagine di sezione\" grid of 8 section links.",
+  "reuseGuidance": "Use for section/landing navigation tiles. For colored promos with eyebrow and CTA use cards-promo.",
+  "sourceUrl": "https://www.terna.it/it"
+}

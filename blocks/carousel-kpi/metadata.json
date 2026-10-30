@@ -1,0 +1,19 @@
+{
+  "variantName": "carousel-kpi",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Boxed KPI slider with vertical icon navigation and large stat figures",
+    "description": "Very light grey-blue band (rgb 243,246,251) containing a white card; left vertical icon nav (5 KPI icons), prev/next arrows; slide title blue uppercase, stats as large blue numbers with label and delta. Right-aligned \"PER SAPERNE DI PIÙ >\" link below."
+  },
+  "contentPattern": {
+    "summary": "Boxed slider with vertical icon navigation and stat figures (large numbers + labels) instead of photos.",
+    "structure": "one row per slide. Cell 1: category icon (used as the nav button). Cell 2: title (heading), reference date paragraph, then stats: each paragraph starting with a number starts a stat, followed by its label and delta (+/-, \"vs\") paragraphs; alternatively a list with one item per stat, or one extra cell per stat",
+    "sourceContent": "5 slides (Economico Finanziari, Operativi, Sociali, Ambientali, Governance): icon, title, reference date, 3-4 stat values with labels"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Homepage KPI highlights (economic-financial, operational, social, environmental, governance).",
+  "reuseGuidance": "Use for number-driven slides. For photo slides use carousel-hero.",
+  "sourceUrl": "https://www.terna.it/it"
+}
